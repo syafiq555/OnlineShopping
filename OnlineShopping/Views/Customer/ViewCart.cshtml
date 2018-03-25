@@ -4,11 +4,13 @@
 }
 @{ 
     var Products = Model.Customer.ShoppingCart.ProductLists;
+
 }
 <h2>View Cart</h2>
 <h3>@Model.Customer.Name, here's your list of items</h3>
 <ol>
     @foreach (var item in Products) {
+
         <li>@item.ProductName</li>
     }
 </ol>
