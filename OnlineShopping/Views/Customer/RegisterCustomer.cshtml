@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "RegisterCustomer";
+}
+
+<h2>Register Customer</h2>
+
+@using (Html.BeginForm("CustomerProfile","Customer"))
+{
+    
+    @Html.Label("Name:");
+    @Html.TextBox("name", null, new { placeholder = "Insert your full name..." });<br />
+
+    @Html.Label("password:");
+    @Html.TextBox("pass", null, new { placeholder = "Insert your password..." }); <br />
+
+    <button type="submit">Register</button>
+}
+

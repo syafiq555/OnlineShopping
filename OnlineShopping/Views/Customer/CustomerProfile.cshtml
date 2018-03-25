@@ -1,0 +1,9 @@
+﻿@model OnlineShopping.Models.Customer
+@{
+    ViewBag.Title = "CustomerProfile";
+}
+
+<h2>Customer Added</h2>
+
+Hye @Model.Name <br />
+<input type="button" value="Go Somewhere Else" onclick="location.href='../Product/DisplayProduct/@Model.Name'" />

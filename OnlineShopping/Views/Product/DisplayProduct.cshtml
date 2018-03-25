@@ -1,0 +1,19 @@
+﻿@model OnlineShopping.ViewModels.ProductDisplayProductViewModel
+@{
+    ViewBag.Title = "DisplayProduct";
+}
+
+@{ 
+    var Name = Model.Customer.Name;
+}
+<h2>DisplayProduct</h2>
+<ul>
+    @foreach (var item in Model.Product.ProductLists)
+    {
+        <li>
+            @Html.DisplayFor(modelItem => item.ProductName) - RM @Html.DisplayFor(modelItem => item.ProductPrice).00
+            <input type="button" value="Add to cart" onclick="location.href='../../Customer/AddToCart/@Name/@item.ProductName'" />
+        </li>
+    }
+</ul>
+
