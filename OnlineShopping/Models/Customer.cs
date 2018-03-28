@@ -18,6 +18,7 @@ namespace OnlineShopping.Models
         }
         public string Name { get; set; }
         public string Pass { get; set; }
+        public string Email { get; set; }
         public ShoppingCart ShoppingCart { get; set; }
     }
 }
