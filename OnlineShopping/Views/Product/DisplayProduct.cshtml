@@ -5,6 +5,7 @@
 
 @{ 
     var Name = Model.Customer.Name;
+    int totalProduct = Model.Customer.ShoppingCart.getTotalProduct();
 }
 <h2>DisplayProduct</h2>
 <ul>
@@ -16,4 +17,11 @@
         </li>
     }
 </ul>
+<br />
+@if (totalProduct > 0)
+{
+    <h5>The number of items in your cart : <input id='totalProduct' type='text' value='@totalProduct' readonly/></h5>
+}
+
+
 

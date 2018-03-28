@@ -26,9 +26,11 @@ namespace OnlineShopping.Controllers
             return View(c);
         }
 
-        public ActionResult AddToCart(Customer C)
+        public ActionResult AddToCart(Customer c, Product p)
         {
-            return View(C);
+            ProductDisplayProductViewModel cp = new ProductDisplayProductViewModel(c, p);
+            cp.Customer.ShoppingCart.AddProduct(p);
+            return View(cp);
         }
     }
 }
