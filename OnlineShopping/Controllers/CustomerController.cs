@@ -20,11 +20,17 @@ namespace OnlineShopping.Controllers
             return View("RegisterCustomer");
         }
 
+        public ActionResult LoginCustomer()
+        {
+            return View("LoginCust");
+        }
+
         [HttpPost]
         public ActionResult CustomerProfile(Customer c)
         {
             return View(c);
         }
+
 
         public ActionResult AddToCart(Customer c, Product p)
         {
