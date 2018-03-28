@@ -1,0 +1,21 @@
+﻿@model OnlineShopping.ViewModels.ProductDisplayProductViewModel
+
+@{
+    ViewBag.Title = "Your cart";
+    var customer = Model.Customer;
+    var product = Model.Product;
+    var cart = customer.ShoppingCart;
+    var productLists = customer.ShoppingCart.ProductLists;
+}
+
+<h2>@customer.Name, here is your cart</h2>
+<ol>
+    @foreach (var item in productLists)
+    {
+        <li>@item.ProductName - RM @item.ProductPrice.00</li>
+    }
+</ol>
+Total Price in your cart = RM @cart.getTotalPrice();
+
+<button onclick="location.href='../../../Product/DisplayProduct/@customer.Name'">Add more items into your cart</button>
+
