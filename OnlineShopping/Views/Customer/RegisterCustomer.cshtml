@@ -8,12 +8,12 @@
 @using (Html.BeginForm("CustomerProfile","Customer"))
 {
     <div class="form-group">
-        @Html.Label("Name:");
-        @Html.TextBox("name", null, new { placeholder = "Enter name" });<br />
+        @Html.Label("Name:")
+        @Html.TextBox("name", null, new { placeholder = "Enter name", @class= "form-control" })<br />
     </div>
 
     @Html.Label("password:");
-    @Html.TextBox("pass", null, new { placeholder = "Insert your password...", type="password" }); <br />
+    @Html.TextBox("pass", null, new { placeholder = "Insert your password...", type="password" }) <br />
 
     <button type="submit">Register</button>
 }
